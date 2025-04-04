@@ -1,7 +1,7 @@
 def heapify(arr, n, i):
     largest = i  # Initialize largest as root
-    l = 2 * i + 1  # left = 2*i + 1
-    r = 2 * i + 2  # right = 2*i + 2
+    l = 2 * i   # left = 2*i 
+    r = 2 * i + 1  # right = 2*i + 1
 
  # See if left child of root exists and is
  # greater than root
@@ -34,7 +34,10 @@ def heapSort(arr):
  # Since last parent will be at (n//2) we can start at that location.
 
     for i in range(n // 2, -1, -1):
+        print(i)
         heapify(arr, n, i)
+
+   # print(arr) 
 
  # One by one extract elements
 
@@ -45,7 +48,7 @@ def heapSort(arr):
 
 # Driver code to test above
 
-arr = [12, 11, 13, 5, 6, 7, ]
+arr = [12, 11, 13, 5, 6, 7 ]
 heapSort(arr)
 n = len(arr)
 print('Sorted array is')
